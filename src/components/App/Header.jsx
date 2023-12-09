@@ -43,7 +43,7 @@ export const Header = () => {
           </a>
         </div>
       </div>
-      <hr className="bg-black mb-6" />
+      <hr className=" mb-6 " />
       <div className="text-center">
         <h1 className="mt-[75px] text-VeryDarkBlue dark:text-VeryPaleBlue font-semibold text-2xl">
           SALDO TOTAL
