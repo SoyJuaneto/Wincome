@@ -16,6 +16,7 @@ export default {
         VeryPaleBlue: "hsl(225, 100%, 98%)",
         LightGrayishBlue: "hsl(227, 47%, 96%)",
         DarkGrayishBlue: "hsl(228, 12%, 44%)",
+        background: "rgba(0,0,0,.5)",
       },
       fontFamily: {
         Inter: ["Inter"],
