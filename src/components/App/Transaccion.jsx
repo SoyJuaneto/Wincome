@@ -3,7 +3,7 @@ import { MovementList } from "./MovementList";
 import { Buttons } from "./Buttons";
 
 export const Transaccion = () => {
-  //ESTE USE STATE ES UN ARREGLO PROVICIONAL CON DATOS QUEMADOS MIENTRAS CREAN LA BASE DE DATOS
+  //ESTE USE STATE ES UN ARREGLO PROVICIONAL CON DATOS QUEMADOS MIENTRAS SE CREA LA BASE DE DATOS
 
   const [ingresos, setIngresos] = useState([
     {

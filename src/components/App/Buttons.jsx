@@ -14,9 +14,7 @@ export const Buttons = () => {
         >
           <ion-icon name="add-circle-outline"></ion-icon>
         </div>
-        <div className="w-[52px] h-[52px] hover:scale-[1.03] bg-amber-400 text-[40px] rounded-full cursor-pointer  text-white text-center">
-          <ion-icon name="sync-circle-outline"></ion-icon>
-        </div>
+
         <div
           onClick={() => setVEgreso(true)}
           className="w-[52px] h-[52px] bg-BrightRed text-[40px] rounded-full cursor-pointer hover:scale-[1.03] text-white text-center"

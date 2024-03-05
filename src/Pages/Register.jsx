@@ -1,10 +1,10 @@
-import { Form } from "./components/login/Form";
+import { UserRegister } from "../Components/Login/UserRegister";
 
-function LoginApp() {
+const Register = () => {
   return (
     <div className="flex w-full h-screen">
       <div className="w-full flex items-center justify-center lg:w-1/2">
-        <Form />
+        <UserRegister />
       </div>
       <div className="hidden relative lg:flex w-1/2 items-center justify-center bg-VeryPaleBlue">
         <div className="w-60 h-60 bg-gradient-to-tr from-LimeGreen to-emerald-950 rounded-full animate-spin" />
@@ -15,6 +15,6 @@ function LoginApp() {
       </div>
     </div>
   );
-}
+};
 
-export default LoginApp;
+export default Register;
