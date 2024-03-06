@@ -1,7 +1,13 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      return true;
+    }
+    return false;
+  });
 
   const handleClick = () => {
     setDark(!dark);
@@ -22,6 +28,9 @@ export const Header = () => {
           WINCOME
         </h1>
         <div className="flex justify-between">
+          <div className="dark:text-white mr-2 mt-[2px] text-[20px]">
+            <ion-icon name="moon-outline"></ion-icon>
+          </div>
           <label
             htmlFor="darkmode"
             className=" w-12 mt-[3px] bg-Toggle h-6 rounded-full cursor-pointer p-[3px] relative overflow-hidden"
@@ -30,17 +39,17 @@ export const Header = () => {
               onClick={handleClick}
               id="darkmode"
               type="checkbox"
-              className="peer sr-only"
+              className=" sr-only"
             ></input>
-            <div className="peer-checked:bg-ToggleGradient w-full h-full absolute top-0 left-0 "></div>
-            <div className="w-[18px] h-[18px] rounded-full bg-LightGrayishBlue peer-checked:translate-x-[24px] transition-all"></div>
+            <div className="dark:bg-ToggleGradient w-full h-full absolute top-0 left-0 "></div>
+            <div className="w-[18px] h-[18px] rounded-full bg-LightGrayishBlue dark:translate-x-[24px] transition-all"></div>
           </label>
-          <a
+          <Link
+            to={"/"}
             className="rounded-full pt-[2px] px-4 ml-4 text-center font-bold bg-VeryDarkBlue dark:bg-VeryPaleBlue text-VeryPaleBlue dark:text-VeryDarkBlue"
-            href="../../index.html"
           >
             Cerrar Sesión
-          </a>
+          </Link>
         </div>
       </div>
       <hr className=" mb-6 " />
